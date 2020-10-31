@@ -7,8 +7,9 @@ page = r.get(url)
 n = 1
 
 soup = BeautifulSoup(page.text, 'html.parser')
-show = soup.find_all('span', class_ = 'medias_audio_title')
-'''showauthor = soup.find_all('span', class_ = 'medias_music_author')'''
+showtitle = soup.find_all('span', class_ = 'medias_audio_title')
+showauthor = soup.find_all('span', class_ = 'medias_music_author')
+show = showauthor + showtitle
 print(soup)
 
 
